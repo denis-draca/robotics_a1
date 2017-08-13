@@ -51,7 +51,7 @@ end
 
 hold on;
 
-part_pose = transl(0.3, 0.3, 0);
+part_pose = transl(0.3, 0.5, 0);
 trplot(part_pose, 'frame', '1', 'color', 'b', 'length' ,1);
 
 myRobot = pick_up_part(part_pose, myRobot);

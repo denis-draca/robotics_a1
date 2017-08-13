@@ -6,6 +6,8 @@ current_pose = myRobot.fkine(current_angle);
 
 list_of_angles = jtraj(current_angle, myRobot.ikine(end_transform), 30);%apparently this doesnt work with 7 dof
 
+%myRobot.plot(list_of_angles);
+
 for i = 1:length(list_of_angles)
     angle = list_of_angles(i , 1:7);
     myRobot.animate(angle);

@@ -63,7 +63,7 @@ r2D2Mesh_h = trisurf(f,v(:,1),v(:,2), v(:,3) ...
 
 %% Flying monkey's head from blender
 % After saving in blender then load the triangle mesh
-[f,v,data] = plyread('j.ply','tri');
+[f,v,data] = plyread('test.ply','tri');
 
 % Get vertex count
 monkeyVertexCount = size(v,1);
@@ -81,6 +81,12 @@ vertexColours = [data.vertex.red, data.vertex.green, data.vertex.blue] / 255;
 % Then plot the trisurf
 monkeyMesh_h = trisurf(f,monkeyVerts(:,1),monkeyVerts(:,2), monkeyVerts(:,3) ...
     ,'FaceVertexCData',vertexColours,'EdgeColor','interp','EdgeLighting','flat');
+
+camlight;
+axis equal;
+view(3);
+hold on;
+
 
 
 %% To spin the camera 
